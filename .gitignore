@@ -1,0 +1,6 @@
+.DS_Store
+vendor/persevere
+pkg/*
+tmp/*
+*.gemspec
+resource/persevere_home
