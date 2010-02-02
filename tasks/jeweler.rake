@@ -1,7 +1,5 @@
 begin
   require 'jeweler'
-  gem 'rake-compiler', '~>0.7'
-  require 'rake/javaextensiontask'
   
   Jeweler::Tasks.new do |gem|
     gem.name = "persvr"
