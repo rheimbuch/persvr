@@ -25,8 +25,8 @@ module Persvr
     end
     
     desc "start [PATH_TO_INSTANCE]", "runs the persevere instance"
-    method_option :port, :type => :numeric, :default => 8080, :alias => "-p"
-    method_option :uri, :type => :string, :default => "/", :alias => "-u"
+    method_option :port, :type => :numeric, :default => 8080, :aliases => "-p"
+    method_option :uri, :type => :string, :default => "/", :aliases => "-u"
     def start(path='.')
       require 'jettr/command'
       jettr = Jettr::Command.new([], options)
