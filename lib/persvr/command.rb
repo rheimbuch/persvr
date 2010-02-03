@@ -8,12 +8,11 @@ module Persvr
     source_paths << File.join(PERSVR_HOME,'resource','persevere_home')
     source_paths << File.join(PERSVR_HOME,'resource','persevere_pages')
     
-    desc "create PATH_TO_INSTANCE", "creates a persevere instance"
-    def create(path)
-      raise "A file or directory already exists at #{path}" if File.exist?(path)
-      
-      directory 'WEB-INF', File.join(path,'WEB-INF')
-      copy_file 'index.html', File.join(path,'index.html')
+    desc "create PATH_TO_INSTANCE [-f]", "creates a persevere instance"
+    method_option :force, :type => :boolean, :default => false, :aliases => '-f'
+    def create(path)      
+      directory 'WEB-INF', File.join(path,'WEB-INF'), :force => options[:force]
+      copy_file 'index.html', File.join(path,'index.html'), :force => options[:force]
     end
     
     desc "clear PATH_TO_INSTANCE", "clears the persevere database"
