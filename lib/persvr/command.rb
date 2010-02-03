@@ -5,7 +5,6 @@ require 'fileutils'
 module Persvr
   class Command < Thor
     include Thor::Actions
-    namespace :persvr 
     source_paths << File.join(PERSVR_HOME,'resource','persevere_home')
     source_paths << File.join(PERSVR_HOME,'resource','persevere_pages')
     
