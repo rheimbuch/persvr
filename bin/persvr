@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+require File.join(File.dirname(__FILE__),'..','lib','persvr')
+require 'persvr/command'
+
+Persvr::Command.start
