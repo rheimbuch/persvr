@@ -41,6 +41,7 @@ namespace :persevere do
   file "resource/persevere_home" => "vendor/persevere/builds/persevereJ2EE" do |t|
     cp_r t.prerequisites.first, t.name
     rm_rf FileList["#{t.name}/*"].exclude("#{t.name}/WEB-INF")
+    touch "#{t.name}/WEB-INF/jslib/.empty_directory"
   end
   task :resource => "resource/persevere_home"
   
