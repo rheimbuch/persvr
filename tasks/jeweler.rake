@@ -13,7 +13,7 @@ begin
     gem.files.include ['resource/**/*']
     gem.files.exclude 'resource/persevere_home/WEB-INF/src/**/*'
     
-    gem.add_dependency 'jettr'
+    gem.add_dependency 'jettr', "~>0.2.1"
     gem.add_dependency 'thor'
   end
 rescue LoadError
