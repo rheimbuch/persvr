@@ -12,6 +12,8 @@ module Persvr
     method_option :force, :type => :boolean, :default => false, :aliases => '-f'
     def create(path)      
       directory 'WEB-INF', File.join(path,'WEB-INF'), :force => options[:force]
+      empty_directory File.join(path,'WEB-INF','jslib')
+      empty_directory File.join(path,'WEB-INF','data')
       copy_file 'index.html', File.join(path,'index.html'), :force => options[:force]
     end
     
