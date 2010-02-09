@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
      "bin/persvr",
      "lib/persvr.rb",
      "lib/persvr/command.rb",
+     "persvr.gemspec",
      "resource/persevere_home/WEB-INF/config/core.json",
      "resource/persevere_home/WEB-INF/lib/cometd-api-1.0.beta4.jar",
      "resource/persevere_home/WEB-INF/lib/cometd-jetty-6.1.14.jar",
